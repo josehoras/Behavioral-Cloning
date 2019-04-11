@@ -99,7 +99,7 @@ But only with this data the model will not know what to do when it begins to ste
 
 Still it could be seen that the model may drive off the road, specially at some "dangerous" parts, where the sides of the road are different as the usual (lake or dirt). To correct it more training data was acquired at these positions. This time recovery manouvers were recorded, starting almost off the road and applying the high angles needed to return to the center. A typical sequence is shown below:
 
-<img src="writeup_images/recover_1.jpg" width="50%" height="50%" /> <img src="writeup_images/recover_2.jpg" width="50%" height="50%" /> <img src="writeup_images/recover_3.jpg" width="50%" height="50%" />
+<img src="writeup_images/recover_1.jpg" width="280" height="140" /> <img src="writeup_images/recover_2.jpg" width="280" height="140" /> <img src="writeup_images/recover_3.jpg" width="280" height="140" />
 
 Then I repeated this process on track two in order to get more data points.
 
