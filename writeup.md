@@ -116,9 +116,9 @@ The first Keras layer defined in our model, as described in last section, is a L
 
 To train the model, the data was divided into training and validation sets. The value of the validation loss tell us the efficacy of the training and possible under- or overfitting effects.
 
-The first parameter to be adjusted is the learning rate. Different learning rates showed these results:
+The first parameter to be adjusted is the learning rate. Different learning rates (1e-2, 1e-3, 1e-4) showed these results:
 
-<img src="writeup_images/lr=1e-2.jpg" width="360" height="240" /> <img src="writeup_images/lr=1e-3.jpg" width="360" height="240" /> <img src="writeup_images/lr=1e-4-C.jpg" width="360" height="240" /> 
+<img src="writeup_images/lr=1e-2.jpg" width="350" height="240" /> <img src="writeup_images/lr=1e-3.jpg" width="350" height="240" /> <img src="writeup_images/lr=1e-4-C.jpg" width="350" height="240" /> 
 
 I set for a learning rate of 1e-3, that shows the best result on the training set. 
 
