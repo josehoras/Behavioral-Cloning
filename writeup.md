@@ -118,7 +118,7 @@ To train the model, the data was divided into training and validation sets. The 
 
 The first parameter to be adjusted is the learning rate. Different learning rates (1e-2, 1e-3, 1e-4) showed these results:
 
-<img src="writeup_images/lr=1e-2.jpg" width="310" height="240" /> <img src="writeup_images/lr=1e-3.jpg" width="310" height="240" /> <img src="writeup_images/lr=1e-4-C.jpg" width="310" height="240" /> 
+<img src="writeup_images/lr=1e-2.jpg" width="280" height="240" /> <img src="writeup_images/lr=1e-3.jpg" width="280" height="240" /> <img src="writeup_images/lr=1e-4-C.jpg" width="280" height="240" /> 
 
 I set for a learning rate of 1e-3, that shows the best result on the training set. 
 
