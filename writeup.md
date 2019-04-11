@@ -95,7 +95,7 @@ A first correct lap driving as close to the center of the road as possible is, o
 
 But only with this data the model will not know what to do when it begins to steer a little off the road. This can be corrected with additional laps (or part of the laps, specially at the curves) where the driving is made close to the left and right edges of the road. Examples of driving on left and right side of the road are shown below:
 
-<img src="writeup_images/left_1.jpg" width="280" height="140" /> <img src="writeup_images/right_2.jpg" width="280" height="140" /> 
+<img src="writeup_images/left_1.jpg" width="280" height="140" /> <img src="writeup_images/right_1.jpg" width="280" height="140" /> 
 
 Still it could be seen that the model may drive off the road, specially at some "dangerous" parts, where the sides of the road are different as the usual (lake or dirt). To correct it more training data was acquired at these positions. This time recovery manouvers were recorded, starting almost off the road and applying the high angles needed to return to the center. A typical sequence is shown below:
 
