@@ -110,6 +110,7 @@ To increase data and reduce overfitting, a process of data augmentation was done
 The input data so acquired was feed to the model using a Python generator function and the Keras function `fit_generator()`, as the amount of data was big enough to make the system run out of memory. The generator includes shuffling of the data, and two generators objects, for training and validation, were defined.
 
 The first Keras layer defined in our model, as described in last section, is a Lambda layer to preprocess the images by cropping to focus on the area of interest to our net (the road)
+
 <img src="writeup_images/center_1.jpg" width="280" height="140" /> <img src="writeup_images/crop_1.jpg" width="280" height="60" /> 
 
 To train the model, the data was divided into training and validation sets. The value of the validation loss tell us the efficacy of the training and possible under- or overfitting effects.
