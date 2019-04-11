@@ -98,7 +98,7 @@ But only with this data the model will not know what to do when it begins to ste
 ![alt text](writeup_images/left_1.jpg) ![alt text](writeup_images/right_1.jpg)
 
 Still it could be seen that the model may drive off the road, specially at some "dangerous" parts, where the sides of the road are different as the usual (lake or dirt). To correct it more training data was acquired at these positions. This time recovery manouvers were recorded, starting almost off the road and applying the high angles needed to return to the center. A typical sequence is shown below:
-
+<img src="writeup_images/recover_1.jpg)" width="30%" height="30%" /> img src="writeup_images/recover_2.jpg)" width="30%" height="30%" /> img src="writeup_images/recover_3.jpg)" width="30%" height="30%" />
 ![alt text](writeup_images/recover_1.jpg) ![alt text](writeup_images/recover_2.jpg) ![alt text](writeup_images/recover_3.jpg)
 
 Then I repeated this process on track two in order to get more data points.
@@ -117,7 +117,7 @@ To train the model, the data was divided into training and validation sets. The 
 
 The first parameter to be adjusted is the learning rate. Different learning rates showed these results:
 
-<img src="writeup_images/lr=1e-2.jpg" width="30%" height="30%" /> <img src="lr=writeup_images/1e-3.jpg" width="30%" height="30%" /> <img src="lr=writeup_images/1e-4-C.jpg" width="30%" height="30%" /> 
+<img src="writeup_images/lr=1e-2.jpg" width="30%" height="30%" /> <img src="writeup_images/lr=1e-3.jpg" width="30%" height="30%" /> <img src="writeup_images/lr=1e-4-C.jpg" width="30%" height="30%" /> 
 
 I set for a learning rate of 1e-3, that shows the best result on the training set. 
 
