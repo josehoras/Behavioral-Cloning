@@ -70,7 +70,7 @@ model.add(Conv2D(64, (3, 3), activation='relu'))
 model.add(Flatten())
 model.add(Dense(100, activation='relu'))
 model.add(Dropout(.5))
-model.add(Dense(50, activation='relu'))  # , kernel_regularizer=regularizers.l2(0.01)))
+model.add(Dense(50, activation='relu'))
 model.add(Dense(1))
 model.compile(loss='mse', optimizer=Adam(lr=learning_rate))
 history_object = model.fit_generator(generator=train_gen, steps_per_epoch=np.ceil(len(train_samples) / batch_size),
