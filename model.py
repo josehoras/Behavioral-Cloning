@@ -24,7 +24,7 @@ def translate(im, translation, w, h):
 # Hyperparameters
 batch_size = 100
 epochs = 5
-lr = 1e-2
+lr = 1e-3
 decay = 1
 
 
@@ -37,8 +37,8 @@ def lr_update(epoch, current_lr):
 
 
 # Open data in csv file
-filesave = 'lr=1e-2.jpg'
-graph_title = 'lr=1e-2'
+filesave = 'lr=1e-3_dout.jpg'
+graph_title = 'lr=1e-3_dout'
 my_path = '/home/jose/GitHub/Behavioral_Cloning/'
 my_path = '/app/'
 data_path = ['data/', 'data2/']
@@ -110,7 +110,7 @@ model.add(Conv2D(64, (3, 3), activation='relu'))
 # model.add(Dropout(.5))
 model.add(Flatten())
 model.add(Dense(100, activation='relu'))
-# model.add(Dropout(.5))
+model.add(Dropout(.5))
 model.add(Dense(50, activation='relu'))
 model.add(Dense(1))
 model.compile(loss='mse', optimizer=Adam(lr=lr))
