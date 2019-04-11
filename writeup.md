@@ -91,11 +91,11 @@ The final model architecture (model.py lines 18-24) consisted of a convolution n
 
 A first correct lap driving as close to the center of the road as possible is, of course, the beginning point to teach the model the correct angles to apply. Two laps were so taken, on clockwise and other counter-clockwise. Here is an example image of center lane driving:
 
-![alt text](writeup_images/center_1.jpg)
+<img src="writeup_images/center_1.jpg" width="280" height="140" /> 
 
 But only with this data the model will not know what to do when it begins to steer a little off the road. This can be corrected with additional laps (or part of the laps, specially at the curves) where the driving is made close to the left and right edges of the road. Examples of driving on left and right side of the road are shown below:
 
-![alt text](writeup_images/left_1.jpg) ![alt text](writeup_images/right_1.jpg)
+<img src="writeup_images/left_1.jpg" width="280" height="140" /> <img src="writeup_images/right_2.jpg" width="280" height="140" /> 
 
 Still it could be seen that the model may drive off the road, specially at some "dangerous" parts, where the sides of the road are different as the usual (lake or dirt). To correct it more training data was acquired at these positions. This time recovery manouvers were recorded, starting almost off the road and applying the high angles needed to return to the center. A typical sequence is shown below:
 
@@ -105,25 +105,24 @@ Then I repeated this process on track two in order to get more data points.
 
 To increase data and reduce overfitting, a process of data augmentation was done by flipping the images, as follows:
 
-![alt text](writeup_images/flip_1.jpg) ![alt text](writeup_images/flip_2.jpg)
+<img src="writeup_images/flip_1.jpg" width="280" height="140" /> <img src="writeup_images/flip_2.jpg" width="280" height="140" /> 
 
 The input data so acquired was feed to the model using a Python generator function and the Keras function `fit_generator()`, as the amount of data was big enough to make the system run out of memory. The generator includes shuffling of the data, and two generators objects, for training and validation, were defined.
 
 The first Keras layer defined in our model, as described in last section, is a Lambda layer to preprocess the images by cropping to focus on the area of interest to our net (the road)
-
-![alt text](writeup_images/center_1.jpg) ![alt text](writeup_images/crop_1.jpg)
+<img src="writeup_images/center_1.jpg" width="280" height="140" /> <img src="writeup_images/crop_1.jpg" width="280" height="60" /> 
 
 To train the model, the data was divided into training and validation sets. The value of the validation loss tell us the efficacy of the training and possible under- or overfitting effects.
 
 The first parameter to be adjusted is the learning rate. Different learning rates showed these results:
 
-<img src="writeup_images/lr=1e-2.jpg" width="30%" height="30%" /> <img src="writeup_images/lr=1e-3.jpg" width="30%" height="30%" /> <img src="writeup_images/lr=1e-4-C.jpg" width="30%" height="30%" /> 
+<img src="writeup_images/lr=1e-2.jpg" width="280" height="210" /> <img src="writeup_images/lr=1e-3.jpg" width="280" height="210" /> <img src="writeup_images/lr=1e-4-C.jpg" width="280" height="210" /> 
 
 I set for a learning rate of 1e-3, that shows the best result on the training set. 
 
 However, overfitting lead to high values on the validation set. The gap between the training and validation loss could be reduced introducing a Dropout layer:
 
-<img src="writeup_images/lr=1e-3.jpg" width="30%" height="30%" /> <img src="writeup_images/lr=1e-3_dout.jpg" width="30%" height="30%" /> 
+<img src="writeup_images/lr=1e-3.jpg" width="280" height="210" /> <img src="writeup_images/lr=1e-3_dout.jpg" width="280" height="210" /> 
 
 Also, more data collection, and data augmentation, as discussed above, were used to reduce overfitting. The excessive training also push the network to overfit, as seen in the plots. I choose then to limit the training to three epochs.
 
