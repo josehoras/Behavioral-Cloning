@@ -118,13 +118,13 @@ To train the model, the data was divided into training and validation sets. The 
 
 The first parameter to be adjusted is the learning rate. Different learning rates (1e-2, 1e-3, 1e-4) showed these results:
 
-<img src="writeup_images/lr=1e-2.jpg" width="290" height="240" /> <img src="writeup_images/lr=1e-3.jpg" width="290" height="240" /> <img src="writeup_images/lr=1e-4-C.jpg" width="290" height="240" /> 
+<img src="writeup_images/lr=1e-2.jpg" width="290" height="230" /> <img src="writeup_images/lr=1e-3.jpg" width="290" height="230" /> <img src="writeup_images/lr=1e-4-C.jpg" width="290" height="230" /> 
 
 I set for a learning rate of 1e-3, that shows the best result on the training set. 
 
 However, overfitting lead to high values on the validation set. The gap between the training and validation loss could be reduced introducing a Dropout layer:
 
-<img src="writeup_images/lr=1e-3.jpg" width="280" height="210" /> <img src="writeup_images/lr=1e-3_dout.jpg" width="280" height="210" /> 
+<img src="writeup_images/lr=1e-3.jpg" width="290" height="230" /> <img src="writeup_images/lr=1e-3_dout.jpg" width="290" height="230" /> 
 
 Also, more data collection, and data augmentation, as discussed above, were used to reduce overfitting. The excessive training also push the network to overfit, as seen in the plots. I choose then to limit the training to three epochs.
 
