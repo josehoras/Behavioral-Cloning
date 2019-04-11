@@ -9,9 +9,10 @@ This file provides a description of the project goals and how I fulfil them. The
 
 My project includes the following files:
 
-* model.py containing the script to create and train the model
-* drive.py for driving the car in autonomous mode
-* model.h5 containing a trained convolution neural network 
+* `model.py` containing the script to create and train the model
+* `drive.py` for driving the car in autonomous mode
+* `model.h5` containing a trained convolution neural network 
+* `run1.mp4` containing a video demontration of my simulation
 * This writeup summarizing the results
 
 #### 2. Running the project
@@ -49,7 +50,7 @@ The most common methods to reduce overfitting are:
 
 The model used an adam optimizer. 
 
-An inspection of different values of the learning rate was made, with the results plotted below. 
+An inspection of different values of the learning rate was made, with the results plotted in the section below. 
 
 #### 4. Appropriate training data
 
@@ -117,7 +118,7 @@ To train the model, the data was divided into training and validation sets. The 
 
 The first parameter to be adjusted is the learning rate. Different learning rates showed these results:
 
-<img src="writeup_images/lr=1e-2.jpg" width="280" height="210" /> <img src="writeup_images/lr=1e-3.jpg" width="280" height="210" /> <img src="writeup_images/lr=1e-4-C.jpg" width="280" height="210" /> 
+<img src="writeup_images/lr=1e-2.jpg" width="360" height="240" /> <img src="writeup_images/lr=1e-3.jpg" width="360" height="240" /> <img src="writeup_images/lr=1e-4-C.jpg" width="360" height="240" /> 
 
 I set for a learning rate of 1e-3, that shows the best result on the training set. 
 
