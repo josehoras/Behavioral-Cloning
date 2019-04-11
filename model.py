@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from keras.models import Sequential
 from keras.layers import Flatten, Lambda, Dense, Cropping2D, Dropout
 from keras.layers import Conv2D
-from keras.layers import MaxPooling2D
 from keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 import sklearn
